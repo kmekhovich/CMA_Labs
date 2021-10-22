@@ -35,3 +35,14 @@ double &QuadraticMatrix::At(int i, int j) {
 const double &QuadraticMatrix::At(int i, int j) const {
     return fields_[i][j];
 }
+
+void QuadraticMatrix::CopyFrom(const QuadraticMatrix &rhs) {
+    if (n_ != rhs.n_) {
+        throw std::invalid_argument("Unable to copy");
+    }
+    for (int i = 0; i < n_; i++) {
+        for (int j = 0; j < n_; j++) {
+            At(i, j) = rhs.At(i, j);
+        }
+    }
+}

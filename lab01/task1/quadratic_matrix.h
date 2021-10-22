@@ -14,6 +14,8 @@ public:
     virtual double& At(int i, int j);
     virtual const double& At(int i, int j) const;
 
+    void CopyFrom(const QuadraticMatrix& rhs);
+
     friend std::ostream& operator<<(std::ostream& os, const QuadraticMatrix& matrix);
 
 protected:
