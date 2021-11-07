@@ -45,7 +45,7 @@ Vector LDLTHelper::Solve(const QuadraticMatrix& ldlt, const Vector& b) {
     auto x = Vector(n);
     for (int i = n - 1; i >= 0; i--) {
         double result = y.At(i);
-        for (int j = n - 1; j > i; j--) {
+        for (int j = i + 1; j < n; j++) {
             result -= ldlt.At(i, j) * x.At(j);
         }
         x.At(i) = result;
