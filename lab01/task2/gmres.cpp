@@ -61,7 +61,7 @@ namespace GMRES {
         std::vector<Vector> Q(m + 1);
 
         Q[0] = b * (1.0 / blen);
-        // первым вектором берем ||b||
+        // первым вектором берем b/||b||
 
         for (int i = 0; i < m && i < max_iter; i++) {
             // алгос г-на Арнольди
