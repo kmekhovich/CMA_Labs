@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kmekhovich/labs/CMA_labs/lab01/task1/lu_helper.h
+quadratic_matrix.h
+/Users/kmekhovich/labs/CMA_labs/lab01/task1/quadratic_matrix.h
+symmetric_matrix.h
+/Users/kmekhovich/labs/CMA_labs/lab01/task1/symmetric_matrix.h
+vector.h
+/Users/kmekhovich/labs/CMA_labs/lab01/task1/vector.h
+
+/Users/kmekhovich/labs/CMA_labs/lab01/task1/main.cpp
+symmetric_matrix.h
+/Users/kmekhovich/labs/CMA_labs/lab01/task1/symmetric_matrix.h
+quadratic_matrix.h
+/Users/kmekhovich/labs/CMA_labs/lab01/task1/quadratic_matrix.h
+lu_helper.h
+/Users/kmekhovich/labs/CMA_labs/lab01/task1/lu_helper.h
+iostream
+-
+
+/Users/kmekhovich/labs/CMA_labs/lab01/task1/quadratic_matrix.h
+ostream
+-
+
+/Users/kmekhovich/labs/CMA_labs/lab01/task1/symmetric_matrix.h
+quadratic_matrix.h
+/Users/kmekhovich/labs/CMA_labs/lab01/task1/quadratic_matrix.h
+ostream
+-
+
+/Users/kmekhovich/labs/CMA_labs/lab01/task1/vector.h
+ostream
+-
+

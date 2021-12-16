@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kmekhovich/labs/CMA_labs/lab01/task3/norm_matrix.h
+iostream
+-
+vector.h
+/Users/kmekhovich/labs/CMA_labs/lab01/task3/vector.h
+
+/Users/kmekhovich/labs/CMA_labs/lab01/task3/smart_gauss.cpp
+vector
+-
+smart_gauss.h
+/Users/kmekhovich/labs/CMA_labs/lab01/task3/smart_gauss.h
+
+/Users/kmekhovich/labs/CMA_labs/lab01/task3/smart_gauss.h
+norm_matrix.h
+/Users/kmekhovich/labs/CMA_labs/lab01/task3/norm_matrix.h
+vector.h
+/Users/kmekhovich/labs/CMA_labs/lab01/task3/vector.h
+
+/Users/kmekhovich/labs/CMA_labs/lab01/task3/vector.h
+iostream
+-
+
