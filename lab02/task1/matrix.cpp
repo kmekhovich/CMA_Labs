@@ -70,7 +70,7 @@ namespace {
 
 Matrix::Matrix(int n, bool random) : n_(n), m_(n), a_(n_, std::vector<std::complex<double>>(m_, 0)) {
     if (random) {
-        static std::mt19937 rng(42);
+        static std::mt19937 rng(43);
         static std::uniform_real_distribution<double> uni(-10, 10);
         for (int i = 0; i < n_; i++) {
             for (int j = 0; j < m_; j++) {
@@ -111,7 +111,7 @@ Matrix operator*(const Matrix &lhs, const Matrix &rhs) {
     return ans;
 }
 
-std::vector<std::pair<std::vector<std::complex<double>>, std::complex<double>>> Matrix::PowerMethod(double eps) const {
+std::vector<std::pair<std::vector<std::complex<double>>, std::complex<double>>> Matrix::PowerMethod(int& iters, double eps) const {
     std::complex<double> lambda_1 = 0, lambda_2 = 0;
     std::complex<double> prev_lambda_1 = 0, prev_lambda_2 = 0;
     double lambda = 0;
@@ -122,6 +122,7 @@ std::vector<std::pair<std::vector<std::complex<double>>, std::complex<double>>> 
     for (int i = 0; i < aulu.size(); i++) {
         aulu[i] -= lambda * u[i];
     }
+    iters = 1;
     while (EuclidNorm(aulu.begin(), aulu.end()) > eps) {
         std::complex<double> normau = EuclidNorm(au.begin(), au.end());
         for (int i = 0; i < n_; i++) {
@@ -200,6 +201,7 @@ std::vector<std::pair<std::vector<std::complex<double>>, std::complex<double>>> 
         }
         prev_lambda_1 = lambda_1;
         prev_lambda_2 = lambda_2;
+        iters++;
     }
     return {{u, lambda}};
 }

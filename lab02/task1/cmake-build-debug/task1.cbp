@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/kmekhovich/labs/CMA_labs/lab02/task1/clock_guard.cpp">
+			<Option target="task1"/>
+		</Unit>
+		<Unit filename="/Users/kmekhovich/labs/CMA_labs/lab02/task1/clock_guard.h">
+			<Option target="task1"/>
+		</Unit>
 		<Unit filename="/Users/kmekhovich/labs/CMA_labs/lab02/task1/main.cpp">
 			<Option target="task1"/>
 		</Unit>

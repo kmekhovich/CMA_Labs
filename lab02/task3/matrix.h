@@ -18,7 +18,7 @@ public:
 
     void MakeHessenByReflectionMethod();
 
-    std::vector<std::complex<double>> DoQRAlgorithm(double eps = 1e-6);
+    std::vector<std::complex<double>> DoQRAlgorithm(int& cnt, double eps = 1e-6);
 
     friend Matrix operator*(const Matrix& lhs, const Matrix& rhs);
 

@@ -15,8 +15,11 @@ public:
 
     void SetVar1();
     void SetVar2();
-
-    void MakeFrobenius();
+    struct Z {
+        int type; // 0 swap 1 multi 2 plus
+        std::vector<double> values;
+    };
+    std::vector<Z> MakeFrobenius(); // return transformations
 
     std::vector<std::pair<double, std::vector<double>>> FindRoots(double eps = 1e-6) const;
 

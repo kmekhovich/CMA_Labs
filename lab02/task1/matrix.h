@@ -18,7 +18,7 @@ public:
     void SetVar3();
     void SetVar4();
 
-    std::vector<std::pair<std::vector<std::complex<double>>, std::complex<double>>> PowerMethod(double eps = 1e-6) const;
+    std::vector<std::pair<std::vector<std::complex<double>>, std::complex<double>>> PowerMethod(int& iters, double eps = 1e-6) const;
 
     friend Matrix operator*(const Matrix& lhs, const Matrix& rhs);
 

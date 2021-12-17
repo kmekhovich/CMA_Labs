@@ -129,6 +129,30 @@ task1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/build
 .PHONY : task1/fast
 
+clock_guard.o: clock_guard.cpp.o
+.PHONY : clock_guard.o
+
+# target to build an object file
+clock_guard.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/clock_guard.cpp.o
+.PHONY : clock_guard.cpp.o
+
+clock_guard.i: clock_guard.cpp.i
+.PHONY : clock_guard.i
+
+# target to preprocess a source file
+clock_guard.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/clock_guard.cpp.i
+.PHONY : clock_guard.cpp.i
+
+clock_guard.s: clock_guard.cpp.s
+.PHONY : clock_guard.s
+
+# target to generate assembly for a file
+clock_guard.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/clock_guard.cpp.s
+.PHONY : clock_guard.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -186,6 +210,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... task1"
+	@echo "... clock_guard.o"
+	@echo "... clock_guard.i"
+	@echo "... clock_guard.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

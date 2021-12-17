@@ -6,9 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/kmekhovich/labs/CMA_labs/lab02/task2/matrix.cpp
-random
--
+/Users/kmekhovich/labs/CMA_labs/lab02/task2/main.cpp
 iostream
 -
 matrix.h

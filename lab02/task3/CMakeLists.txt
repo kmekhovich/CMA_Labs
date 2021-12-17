@@ -3,4 +3,4 @@ project(task3)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(task3 main.cpp matrix.cpp matrix.h)
+add_executable(task3 main.cpp matrix.cpp clock_guard.cpp)

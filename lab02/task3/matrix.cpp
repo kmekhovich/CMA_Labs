@@ -61,8 +61,8 @@ namespace {
 
 Matrix::Matrix(int n, bool random) : n_(n), m_(n), a_(n_, std::vector<double>(m_, 0)) {
     if (random) {
-        static std::mt19937 rng(42);
-        static std::uniform_real_distribution<double> uni(-10, 10);
+        static std::mt19937 rng(43);
+        static std::uniform_real_distribution<double> uni(-1, 1);
         for (int i = 0; i < n_; i++) {
             for (int j = 0; j < m_; j++) {
                 a_[i][j] = uni(rng);
@@ -140,12 +140,12 @@ std::ostream &operator<<(std::ostream &os, const Matrix &matrix) {
     return os;
 }
 
-std::vector<std::complex<double>> Matrix::DoQRAlgorithm(double eps) {
+std::vector<std::complex<double>> Matrix::DoQRAlgorithm(int& cnt, double eps) {
     std::vector<std::complex<double>> res;
     res.reserve(2 * n_);
 
 
-    for (int cnt = 1;; cnt++) {
+    for (cnt = 1;; cnt++) {
         std::vector<double> cs(n_, 0.);
         std::vector<double> sn(n_, 0.);
 
@@ -199,7 +199,7 @@ std::vector<std::complex<double>> Matrix::DoQRAlgorithm(double eps) {
         }
 
         if (res.size() == n_) {
-            std::cout << cnt << " iter" << "\n";
+//            std::cout << cnt << " iter" << "\n";
             return res;
         }
     }

@@ -6,10 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/Users/kmekhovich/labs/CMA_labs/lab02/task3/clock_guard.h
+string
+-
+
 /Users/kmekhovich/labs/CMA_labs/lab02/task3/main.cpp
 matrix.h
 /Users/kmekhovich/labs/CMA_labs/lab02/task3/matrix.h
+clock_guard.h
+/Users/kmekhovich/labs/CMA_labs/lab02/task3/clock_guard.h
 iostream
+-
+numeric
 -
 
 /Users/kmekhovich/labs/CMA_labs/lab02/task3/matrix.h

@@ -92,7 +92,8 @@ std::ostream &operator<<(std::ostream &os, const Matrix &matrix) {
     return os;
 }
 
-void Matrix::MakeFrobenius() {
+std::vector<Matrix::Z> Matrix::MakeFrobenius() {
+    std::vector<Matrix::Z> zapr;
     for (int i = n_ - 1; i >= 1; i--) {
         // выбираем наибольший
         int maxi = 0;
@@ -103,6 +104,7 @@ void Matrix::MakeFrobenius() {
         }
 
         if (maxi != i - 1) {
+            zapr.push_back({0, {static_cast<double>(i - 1), static_cast<double>(maxi)}});
             for (int j = 0; j < n_; j++) {
                 std::swap(a_[j][i - 1], a_[j][maxi]);
             }
@@ -110,6 +112,7 @@ void Matrix::MakeFrobenius() {
         }
 
         double c = a_[i][i - 1];
+        zapr.push_back({1, {static_cast<double>(i - 1), c}});
         for (int j = 0; j < n_; j++) {
             a_[j][i - 1] /= c;
         }
@@ -124,11 +127,13 @@ void Matrix::MakeFrobenius() {
             for (int z = 0; z < n_; z++) {
                 a_[z][j] -= cc * a_[z][i - 1];
             }
+            zapr.push_back({2, {static_cast<double>(i - 1), static_cast<double>(j), cc}});
             for (int z = 0; z < n_; z++) {
                 a_[i - 1][z] += cc * a_[j][z];
             }
         }
     }
+    return zapr;
 }
 
 std::vector<std::pair<double, std::vector<double>>> Matrix::FindRoots(double eps) const {
@@ -138,7 +143,6 @@ std::vector<std::pair<double, std::vector<double>>> Matrix::FindRoots(double eps
     double left = -1e4;
     double right = 1e4;
     double step = (right - left) / sz;
-//    std::cout << Func(-3.66920587181) << "\n";
     for (double i = left; i < right; i += step) {
         auto newRoot = GetNewtonRoot(i);
         if (ans.empty() || std::abs(newRoot - ans.back().first) > eps) {
@@ -150,7 +154,7 @@ std::vector<std::pair<double, std::vector<double>>> Matrix::FindRoots(double eps
     ans2.reserve(ans.size());
     auto prev = *ans.begin();
     std::for_each(ans.begin(), ans.end(), [&prev, &ans2, eps] (auto& t) {
-        if (std::abs(prev.first - t.first) > eps) {
+        if (ans2.empty() || std::abs(prev.first - t.first) > eps) {
             ans2.push_back(t);
             prev = t;
         }

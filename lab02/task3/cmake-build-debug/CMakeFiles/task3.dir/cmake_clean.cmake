@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/task3.dir/clock_guard.cpp.o"
   "CMakeFiles/task3.dir/main.cpp.o"
   "CMakeFiles/task3.dir/matrix.cpp.o"
   "task3"
