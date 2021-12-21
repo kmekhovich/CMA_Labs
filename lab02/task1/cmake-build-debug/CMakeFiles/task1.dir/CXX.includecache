@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kmekhovich/labs/CMA_labs/lab02/task1/clock_guard.h
+string
+-
+
+/Users/kmekhovich/labs/CMA_labs/lab02/task1/main.cpp
+iostream
+-
+numeric
+-
+matrix.h
+/Users/kmekhovich/labs/CMA_labs/lab02/task1/matrix.h
+clock_guard.h
+/Users/kmekhovich/labs/CMA_labs/lab02/task1/clock_guard.h
+
+/Users/kmekhovich/labs/CMA_labs/lab02/task1/matrix.h
+vector
+-
+ostream
+-
+complex
+-
+

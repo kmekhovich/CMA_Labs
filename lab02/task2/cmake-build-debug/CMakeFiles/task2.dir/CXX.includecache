@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kmekhovich/labs/CMA_labs/lab02/task2/main.cpp
+iostream
+-
+matrix.h
+/Users/kmekhovich/labs/CMA_labs/lab02/task2/matrix.h
+
+/Users/kmekhovich/labs/CMA_labs/lab02/task2/matrix.h
+vector
+-
+ostream
+-
+complex
+-
+
